@@ -52,14 +52,16 @@
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">Academic Projects</a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
           </li>
+          -->
         </ul>
       </div>
     </nav>
@@ -216,6 +218,8 @@
               <div class="subheading mb-3">Research Scholar, RTML Lab</div>
               <p>Developed path-planning algorithms through geometric path-planning method, for specific cases of automated parking in the Cadillac SRX self-driving car. Specific cases include parking on curved roads, and tight spaces like one-way streets with cars parked on either sides of the road. I tested the path-planner by simulation in the Gazebo platform with a model imitating the simple kinematics and dynamics of the original vehicle in a virtual environment. The vehicle controllers and path planners were coded in python as a ROS (Robot operating system) package.
               Contact: Prof. Raj Rajkumar – rajkumar@cmu.edu</p>
+              <iframe src="https://drive.google.com/file/d/0B2L9TFVPrsI8ZEw5a29XaFFoUGM/preview" width="640" height="480"></iframe>
+              <iframe src="https://drive.google.com/file/d/0B2L9TFVPrsI8VVdseVgwaFdNUVk/preview" width="640" height="480"></iframe>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">January 2016 - May 2016</span>
@@ -229,7 +233,7 @@
               <p>I handled the day-to-day operations for a start-up that manufactures home automation products which included tasks like negotiating contracts with Real-estate developers, builders and retail stores.</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">November 2016 - March 2017</span>
+              <span class="text-primary">June 2016 - March 2017</span>
             </div>
           </div>
         </div>
@@ -238,37 +242,91 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
         <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
+          <h2 class="mb-5">Academic Projects</h2>
 
+
+          <h3 class="mb-3">Past Projects</h3>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Carnegie Mellon University</h3>
-              <div class="subheading mb-3">Research Scholar, RTML Lab</div>
-              <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+              <h5 class="mb-3">Traffic sign Detection and Classification</h5>
+              <p>Performed traffic sign detection and classification as the car drives around the WPI university campus. Implemented this with 2 approaches: 1) Convolutional Neural Network (CNN) with sliding window, 2) YOLO.Initially trained a CNN (LeNet architecture) with the German GTSD dataset. Then used a sliding window approach to detect the positions of the traffic signs in the video to draw bounding boxes over them.Second approach was with You-only look once (YOLO) algorithm. The same network performed detection and classification. It was much faster (20 fps on a GTX 1060) than the previous method but sacrificed accuracy.</p>
+              <iframe src="https://drive.google.com/file/d/1nxinxEmpOO59KKDkXPgXayNqtq88a_ym/preview" width="640" height="480"></iframe>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">January 2016 - May 2016</span>
+              <span class="text-primary">June 2017 - Jan 2018</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Karsan Technologies</h3>
-              <div class="subheading mb-3">Chief of Operations</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+              <h5 class="mb-3">Autonomous Driving in a Car simulator</h5>
+              <p>Made a car autonomously drive itself in a simulator. Implemented this with 2 approaches: 1) Supervised Learning 2) Reinforcement Learning. In the Supervised learning method, I used the NVIDIA Self-driving CNN architecture and trained it with images from a front facing camera attached to a car from the Udacity car simulator. It was able to autonomously drive to complete one whole lap. The reinforcement approach was implemented with Asynchronous Advantage Actor-critic (A3C) algorithm. I took a distributed approach by running it on 3 different computers at the same time. The car was able to autonomously navigate one lap at reduced speeds in the TORCS simulator after a day of training.</p>
+              <iframe src="https://drive.google.com/file/d/1iDCGAinlHw2CJCakteaB4yBvGWGhGYmW/preview" width="640" height="480"></iframe>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">November 2016 - March 2017</span>
+              <span class="text-primary">June 2017 - Jan 2018</span>
             </div>
           </div>
-        </div>
-      </section>
 
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-3">Lane Line Detection</h5>
+              <p>Detected lane lines as the car drives along a highway. Initially, I implemented with Canny edge detector and Hough transform. This performed reasonably well on straight roads but failed with curved roads. Then I implemented a more robust method of combining results from RGB and HSV color space and then identifying and fitting lane lines with polynomials. This worked much better than the previous method for changing lighting conditions and curved roads.</p>
+              <iframe src="https://drive.google.com/file/d/1UMoPCK-gWcW6fb2EUTMLL8m-y5EFPyPW/preview" width="640" height="480"></iframe>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2017 - December 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-3">Vehicle Detection</h5>
+              <p>Detected vehicles in a video taken from a camera attached on a car on a highway. Implemented this with a Random Forest classifier and sliding window approach.</p>
+              <iframe src="https://drive.google.com/file/d/196aLyJOlQBUEnOlye2-cJ4Hsv9px8PY1/preview" width="640" height="480"></iframe>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2017 - Jan 2017</span>
+            </div>
+          </div>
+
+          <h3 class="mb-3">Ongoing Projects</h3>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-3">Teaching Teleoperated Surgery</h5>
+              <p>•  The goal of this project is to use Da vinci surgical systems to teach teleoperation to perform a surgery.</p>
+              <p>•  Main idea: Use two master manipulators to control one slave manipulator. A “Student” will operate one master manipulator and a “Teacher” will operate the other. The goal is to help the “Student” learn to teleoperate the slave manipulator to perform a surgery, using force feedback.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Jan 2018 - present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-3">Dexterous arm-hand and bimanual coordination</h5>
+              <p>•  The goal of this project is to use Baxter robot’s arm to manipulate objects based on their affordance.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Jan 2018 - present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-3">Trajectory tracking controller for lane shifting</h5>
+              <p>•  The goal of this project is to design a trajectory tracking controller to perform lane shifting in an RC car.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Jan 2018 - present</span>
+            </div>
+          </div>
+
+<!--
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+          <p>Apart from being a passionate roboticist, I enjoy most of my time being outdoors. I am a golfer with a number of amateur titles and two appearances on the Pro-tour.</p>
         </div>
       </section>
 
@@ -306,7 +364,7 @@
           </ul>
         </div>
       </section>
-
+-->
     </div>
 
     <!-- Bootstrap core JavaScript -->
